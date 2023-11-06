@@ -13,7 +13,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>
   <!-- <link rel="stylesheet" href="css/style1.css"> -->
   <!-- <link rel="stylesheet" href="saas/main.css"> -->
-  <title>MedSync Hub | Track</title>
+  <title>MedSync Hub | News</title>
 </head>
 
 <body>
@@ -49,47 +49,37 @@
     </div>
   </nav>
 
-  <section class="track">
-    <div class="track-box">
+  <section class="news">
+    <!-- {
+      source: { id: null, name: 'New York Post' },
+      author: 'Fox News Latino',
+      title: 'Are the benefits of a cold shower worth the potential risks? - New York Post ',
+      description: 'Most of us have experienced that moment of shock when the hot water runs out mid-shampoo — but many experts claim the benefits of a frigid shower are worth the unpleasant jolt.',
+      url: 'https://nypost.com/2023/11/04/lifestyle/are-the-benefits-of-a-cold-shower-worth-the-discomfort/',
+      urlToImage: 'https://nypost.com/wp-content/uploads/sites/2/2023/11/iStock-187248862.jpg?quality=75&strip=all&w=1024',
+      publishedAt: '2023-11-04T20:18:00Z',
+      content: 'Most of us have experienced that moment of shock when the hot water runs out mid-shampoo but many experts claim the benefits of a frigid shower are worth the unpleasant jolt.\r\n' +
+        'For those who arent qui… [+5549 chars]'
+    }, -->
 
-      <form class="track-box-form track-form" id="track-form">
-        <div class="form__group">
-          <input type="number" class="form__input form__input--track  form__input--track-fat " placeholder="Fat%" id="fat" required>
-          <label for="fat" class="form__label form__label--track">Fat%</label>
+    <% articles.forEach(function(article, index) { %>
+    
+      <% if(article.title != "[Removed]" && article.urlToImage){ %>
+        <div class="news_card">
+          <div class="news-img">
+            <img src="<%- article.urlToImage %>">
+          </div>
+          <div class="news-main">
+            <h2> <%- article.title %> </h2>
+            <p> <%- article.description %> </p>
+            <a href="<%- article.url %>">Read More</a>
+          </div>
         </div>
-        <div class="form__group">
-          <input type="number" class="form__input form__input--track  form__input--track-bmi" placeholder="BMI" id="bmi" required>
-          <label for="bmi" class="form__label form__label--track">BMI</label>
-        </div>
-        <div class="form__group">
-          <input type="number" class="form__input form__input--track  form__input--track-weight" placeholder="Weight Kg" id="weight" required>
-          <label for="weight" class="form__label form__label--track">Weight Kg</label>
-        </div>
-        <div class="form__group">
-          <input type="number" class="form__input form__input--track  form__input--track-sugar" placeholder="Blood Sugar" id="sugar" required>
-          <label for="sugar" class="form__label form__label--track">Blood Sugar</label>
-        </div>
-        <div class="form__group">
-          <input type="number" class="form__input form__input--track  form__input--track-bp" placeholder="Blood Pressure" id="bp" required>
-          <label for="bp" class="form__label form__label--track">Blood Pressure</label>
-        </div>
-        <div class="track-note">
-          <p>Note:- Enter & submit min. 2 values times to visualize on graph.</p>
-        </div>
-        <div class="form__group form__group--btn">
-          <button class="btn btn--green">Submit</button>
-        </div>
-      </form>
-    </div>
-
-
-    <div class="track-map">
-      <div class="overflowChart" style="max-width: 1000px;">
-        <canvas id="infChart" width="900" height="560"></canvas>
-      </div>
-    </div>
+      <% } %>
+    <% }) %>
 
   </section>
+
   <div id="goToTop" class="gototop">
     <a href="mailto:medsync_hub@gmail.com"> <button class="btn btn-dange btn-sm toShow" type="button" name="button"> <i style="color:#777; font-size:50px;line-height:60px;" class="fas fa-envelope aaa"></i></button></a>
     <a href="#"> <button class="btn btn-dange btn-sm" type="button" name="button"> <i style="color:#777; font-size:50px;line-height:60px;" class="fas fa-arrow-up aaa"></i></button></a>

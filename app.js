@@ -8,6 +8,7 @@ const AppError = require('./utils/appError')
 const userRouter = require('./routes/userRoute');
 const prescriptionRouter = require('./routes/prescriptionRoute')
 const viewRouter = require('./routes/viewRouter')
+const newsRouter = require('./routes/newsRoute')
 
 const app = express()
 
@@ -17,8 +18,8 @@ app.use(
     })
 );
 
-app.set("view engine",'ejs')
-app.set('views',path.join(__dirname,'views'))
+app.set('views','./views');
+app.set('view engine','ejs')
 app.use(express.static(`${__dirname}/public`))
 
 //setting up the middleware for the static files
@@ -59,5 +60,11 @@ app.use('/api/user',userRouter)
 
 //route for prescription
 app.use('/api/prescription',prescriptionRouter)
+
+app.use('/news',newsRouter);
+
+// app.get('/api/news', (req, res) => {
+//   res.render('news')
+// })
 
 module.exports = app

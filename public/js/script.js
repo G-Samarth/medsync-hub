@@ -43,7 +43,7 @@ var lightFlag = true;
         $("body").toggleClass('dark');
         // $(".navbar").toggleClass('navDark');
         if (!lightFlag){
-            $("body").css("background-image", "url('./img/bgDark1.png')");
+            $("body").css("background-image", "url('./img/bg.jpeg')");
             $(".iphoneDark").attr("src", "img/iphoneDark.png");
             $("video").attr("src", "/video/FinalB.mp4");
             $(".first").css("background", "black");
@@ -52,7 +52,7 @@ var lightFlag = true;
         }, 700);
           }
         else{
-            $("body").css("background-image", "url('./img/bg8.png')");
+            $("body").css("background-image", "url('./img/bg.jpeg')");
             $(".iphoneDark").attr("src", "img/iphone.png");
             $("video").attr("src", "/video/Final.mp4");
             $(".first").css("background", "white");
