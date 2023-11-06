@@ -4,7 +4,7 @@
 ::-webkit-scrollbar-thumb{
   /* border: solid white 2px; */
   border-radius: 10px;
-  background: #00e676;
+  background:rgb(5, 130, 19);
 }
 /* ::-webkit-scrollbar-track{
   background: transparent;
@@ -16,7 +16,7 @@
   padding: 16px 12.5px 16px 5px !important
 }
 #data-union-tab:hover{
-  background-color: #00e676 !important;
+  background-color: rgb(5, 130, 19) !important;
   color: white !important;
   transition: none;
     transform: translateY(0rem) !important;
@@ -138,19 +138,19 @@ body {
   font-weight: 400;
   font-size: 1.6rem;
   padding: 3rem;
-  background-image: url('../img/bg8.png');
+  background-image: url('../img/bgph.jpeg');
   background-size: contain;
   background-repeat: no-repeat;
 }
 
 ::-moz-selection {
   color: white;
-  background: #00e676;
+  background: rgb(5, 130, 19);
 }
 
 ::selection {
   color: white;
-  background: #00e676;
+  background: rgb(5, 130, 19);
 }
 
 input[type='checkbox'] {
@@ -283,6 +283,8 @@ input[type='checkbox']:checked~.checkB {
   margin-left: 10rem;
   box-shadow: 0 0.2rem 1.5rem rgba(0, 123, 255, 0.5);
   border-radius: 3px;
+  
+
 }
 
 @media (max-width: 56.25em) {
@@ -425,7 +427,7 @@ input[type='checkbox']:checked~.checkB {
 
 .heading-primary--main--green {
   font-size: 4.5rem;
-  color: #00e676;
+  color: rgb(5, 130, 19);
 }
 
 .heading-primary--main--blue {
@@ -435,7 +437,7 @@ input[type='checkbox']:checked~.checkB {
 
 .heading-primary--colored {
   font-size: 3rem;
-  background-image: linear-gradient(#00e676, #007bff);
+  background-image: linear-gradient(rgb(5, 130, 19), #007bff);
   -webkit-background-clip: text;
   color: transparent;
 }
@@ -456,13 +458,13 @@ input[type='checkbox']:checked~.checkB {
 }
 
 .heading-secondary--colored {
-  background-image: linear-gradient(#00e676, #007bff);
+  background-image: linear-gradient(rgb(5, 130, 19), #007bff);
   -webkit-background-clip: text;
   color: transparent;
 }
 
 .heading-secondary--green {
-  color: #00e676;
+  color: rgb(5, 130, 19);
 }
 
 .heading-tertiary {
@@ -477,14 +479,14 @@ input[type='checkbox']:checked~.checkB {
 }
 
 .heading-tertiary__green {
-  color: #00e676;
+  color: rgb(5, 130, 19);
 }
 
 .heading-tertiary--prescription {
   text-align: left;
   padding: 4rem;
   font-size: 3rem;
-  color: #00e676;
+  color: rgb(5, 130, 19);
 }
 
 .paragraph {
@@ -546,14 +548,14 @@ input[type='checkbox']:checked~.checkB {
 }
 
 .btn--green {
-  background-color: #00e676;
+  background-color: rgb(5, 130, 19);
   color: white;
   font-weight: 600;
 }
 
 .btn--green:hover {
   background-color: inherit;
-  border: 1px solid #00e676;
+  border: 1px solid rgb(5, 130, 19);
   color: #999;
 }
 
@@ -564,7 +566,7 @@ input[type='checkbox']:checked~.checkB {
 }
 
 .btn--border {
-  border: 0.19rem solid #00e676 !important;
+  border: 0.19rem solid rgb(5, 130, 19) !important;
   /* margin-left: 2rem; */
   text-decoration: none;
   transition: all 0.2s, border 0.2s, color 0.2s;
@@ -572,7 +574,7 @@ input[type='checkbox']:checked~.checkB {
 
 .btn--border:hover,
 .btn--border:active {
-  background-color: #00e676;
+  background-color: rgb(5, 130, 19);
 }
 
 .headBtn {
@@ -604,7 +606,7 @@ input[type='checkbox']:checked~.checkB {
 .feature-box__icon {
   font-size: 6rem;
   margin-bottom: 0.5rem;
-  color: #00e676;
+  color: rgb(5, 130, 19);
 }
 
 .feature-box:hover {
@@ -669,7 +671,7 @@ input[type='checkbox']:checked~.checkB {
 .form__input:focus {
   outline: none;
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
-  border-bottom: 0.19rem solid #00e676;
+  border-bottom: 0.19rem solid rgb(5, 130, 19);
 }
 
 .form__input:focus:invalid {
@@ -757,7 +759,7 @@ input[type='checkbox']:checked~.checkB {
 .footer__link:hover,
 .footer__link:active {
   /* transform: rotate(5deg) scale(1.5); */
-  color: #00e676;
+  color: rgb(5, 130, 19);
   /* box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.4); */
   /* background-color: #000;  */
 }
@@ -917,7 +919,7 @@ ul li {
 
 .navigation__link:hover,
 .navigation__link:active {
-  border-bottom: 0.125rem solid #00e676;
+  border-bottom: 0.125rem solid rgb(5, 130, 19);
 }
 
 .navigation__link:hover:not(.btn),
@@ -958,7 +960,7 @@ ul li {
 
 .btn-dange {
   display: none;
-  background-color: #00e676;
+  background-color: rgb(5, 130, 19);
   border-radius: 15%;
   /* width: 80px; */
   /* height: 70px; */
@@ -968,7 +970,7 @@ ul li {
 
 .btn-dange:hover {
   background-color: inherit;
-  border: 1px solid #00e676;
+  border: 1px solid rgb(5, 130, 19);
 }
 
 i {
@@ -990,7 +992,7 @@ i {
   }
   body {
     padding: 0.19rem;
-    background-image: url('../img/bgph.png');
+    background-image: url('../img/bgph.jpeg');
     /* background-size:auto; */
   }
 
@@ -1199,7 +1201,7 @@ i {
 }
 
 .prescription-message {
-  color: #00e676;
+  color: rgb(5, 130, 19);
   margin: 7px 0;
   font-size: 18px;
 }
@@ -1209,7 +1211,7 @@ i {
     width: 150px !important;
   }
   body {
-    /* background-image: url("../img/bgph.png"); */
+    background-image: url("../img/bgph.jpeg");
   }
 
   .phone {
