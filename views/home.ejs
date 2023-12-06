@@ -1,31 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <!-- <script src="https://api.mapbox.com/mapbox-gl-js/v1.11.1/mapbox-gl.js"></script>
+    <link
+      href="https://api.mapbox.com/mapbox-gl-js/v1.11.1/mapbox-gl.css"
+      rel="stylesheet"
+    /> -->
+    <script
+      src="https://kit.fontawesome.com/01d68998f7.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDdcGSW3zmyyAVftdcUMj90B5621mE2BHA&libraries=places&callback=initMap"
+      async
+      defer
+    ></script>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="icon" href="img/Icon.ico" />
+    <!-- <link rel="stylesheet" href="saas/main.css"> -->
+    <title>MedSync Hub | Home</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  <script src="https://api.mapbox.com/mapbox-gl-js/v1.11.1/mapbox-gl.js"></script>
-  <link href="https://api.mapbox.com/mapbox-gl-js/v1.11.1/mapbox-gl.css" rel="stylesheet" />
-  <script src="https://kit.fontawesome.com/01d68998f7.js" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="/css/style.css">
-  <link rel="icon" href="img/Icon.ico">
-  <!-- <link rel="stylesheet" href="saas/main.css"> -->
-  <title>MedSync Hub | Home</title>
-</head>
-
-<body>
-  <section class="first" style="z-index:9999 !important;">
-        <div class="screen">
-          <!-- <video class="video" width="240" height="180" muted autoplay loop>
+  <body>
+    <section class="first" style="z-index: 9999 !important">
+      <div class="screen">
+        <!-- <video class="video" width="240" height="180" muted autoplay loop>
             <source class="source" src="/video/Final.mp4" type="video/mp4" />
           </video> -->
-        </div>
-      </section>
+      </div>
+    </section>
 
-  <!-- <div class="navigation">
+    <!-- <div class="navigation">
         <div class="navigation--row">
             <nav class="navigation__nav">
 
@@ -41,87 +60,146 @@
         </div>
 
     </div> -->
-  <nav id="navBar" class="navbar navbar-expand-lg navbar-light navigation--row navEdit navigation__nav">
-    <h2 style="font-size:40px;font-weight:900;color:rgb(5, 130, 19)"><i>MedSync Hub</i></h2>
-    <button id="hamMenu" class="navbar-toggler hide" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+    <nav
+      id="navBar"
+      class="navbar navbar-expand-lg navbar-light navigation--row navEdit navigation__nav"
+    >
+      <h2 style="font-size: 40px; font-weight: 900; color: rgb(5, 130, 19)">
+        <span onclick="window.location.href='/';" style="cursor: pointer">
+          <i>MedSync Hub</i>
+        </span>
+      </h2>
+      <button
+        id="hamMenu"
+        class="navbar-toggler hide"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav ml-auto">
-        <!-- <div class="textBox">
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <!-- <div class="textBox">
           Go Dark
         </div> -->
-        <!-- <label><input id="checkbox" type="checkbox"><span class="checkB"></label> -->
-        <li class="navigation__item nav-item"><a href="#aboutUs" class="fontWhite navigation__link">About Us</a></li>
-        <li class="navigation__item nav-item"><a href="#keyFea" class="fontWhite navigation__link">Key features</a></li>
-        <li class="navigation__item nav-item"><a href="/track" class="fontWhite navigation__link">Track Your Fitness</a></li>
-        <li class="navigation__item nav-item"><a href="/predict" class="fontWhite navigation__link">Get Diagnosed</a></li>
-        <li class="navigation__item nav-item"><a href="/news" class="fontWhite navigation__link">News</a></li>
-        <li class="navigation__item nav-item"><a href="/login" class="fontWhite navigation__link btn btn--green  btn--login blueBack">Login</a></li>
-        <li class="navigation__item nav-item"><a href="/signup" class="fontWhite navigation__link btn btn--green btn--signup blueBack">Sign up</a></li>
-      </ul>
-    </div>
-  </nav>
+          <!-- <label><input id="checkbox" type="checkbox"><span class="checkB"></label> -->
+          <li class="navigation__item nav-item">
+            <a href="#aboutUs" class="fontWhite navigation__link">About Us</a>
+          </li>
 
+          <li class="navigation__item nav-item">
+            <a href="/track" class="fontWhite navigation__link"
+              >Track Your Fitness</a
+            >
+          </li>
+          <li class="navigation__item nav-item">
+            <a href="/predict" class="fontWhite navigation__link"
+              >Get Diagnosed</a
+            >
+          </li>
+          <li class="navigation__item nav-item">
+            <a href="/news" class="fontWhite navigation__link">News</a>
+          </li>
+          <li class="navigation__item nav-item">
+            <a
+              href="/login"
+              class="fontWhite navigation__link btn btn--green btn--login blueBack"
+              >Login</a
+            >
+          </li>
+          <li class="navigation__item nav-item">
+            <a
+              href="/signup"
+              class="fontWhite navigation__link btn btn--green btn--signup blueBack"
+              >Sign up</a
+            >
+          </li>
+          <!-- <li class="navigation__item nav-item">
+            <a
+              href="#"
+              id="logout"
+              class="fontWhite navigation__link btn btn--green btn--login blueBack"
+              >Logout</a
+            >
+          </li> -->
+        </ul>
+      </div>
+    </nav>
 
+    <header class="header u-margin-bottom-big">
+      <div class="header__bogo-box"></div>
 
-  <header class="header u-margin-bottom-big ">
-    <div class="header__bogo-box">
+      <div class="header__text-box row">
+        <h1 class="heading-primary u-margin-bottom-med">
+          <span class="heading-primary--main">
+            <br />
+            <span class="heading-primary--main--green">We organize your</span>
+            <br />
+            <span class="heading-primary--main--blue"
+              >medical<br />
+              records
+            </span>
+            <br />
+            <span class="heading-primary--main--green"
+              >so you can <br />access them in</span
+            >
+            <br />
+            <span class="heading-primary--main--blue"> 10 seconds!</span>
+          </span>
+        </h1>
 
-    </div>
+        <a href="/track" class="btn btn--green btn--header headBtn">
+          Track Your Fitness
+        </a>
+        <a href="/upload" class="btn btn--border btn--header headBtn fontWhite">
+          Upload and View
+        </a>
+        <br />
+      </div>
+    </header>
+    <br /><br /><br />
+    <div id="aboutUs"></div>
+    <section class="bgCol section-about">
+      <div class="background-color-heading u-center-text u-margin-bottom-big">
+        <h2 class="heading-secondary">About us</h2>
+      </div>
 
-    <div class="header__text-box row">
-      <h1 class="heading-primary u-margin-bottom-med">
-        <span class="heading-primary--main">
-          <br>
-          <span class=" heading-primary--main--green ">We organize your</span> <br>
-          <span class=" heading-primary--main--blue ">medical<br> records </span> <br>
-          <span class=" heading-primary--main--green ">so you can <br>access them in</span> <br>
-          <span class=" heading-primary--main--blue "> 10 seconds!</span>
+      <div style="text-align: center" class="section-about__para-box">
+        <p class="paragraph section-about__para">
+          Our application helps you to store all your medical records in one
+          place and we will keep them safe and secure with ourselves so that you
+          can find what you are looking for in your medical history in just a
+          matter of seconds. Also, you can track and visualize your daily
+          fitness records with our interactive graphs. All of these features
+          with authentication and authorization so that only you can see your
+          data.
+          <br />
+          We, helps you take care of your family’s health by storing medical
+          records online, safely and securely. So, you can find what you’re
+          looking for in just a matter of seconds! We give more than a storage
+          solution, it’s an effective way to ensure that
+        </p>
 
-        </span>
+        <h3 class="heading-tertiary heading-tertiary__blue">
+          YOU ARE IN CONTROL OF YOUR HEALTH 24/7
+        </h3>
+        <br />
+        <a
+          style="margin: auto"
+          href="/predict"
+          class="btn btn--border btn--header headBtn fontWhite"
+        >
+          Get Diagnosed
+        </a>
+      </div>
+    </section>
 
-
-      </h1>
-
-      <a href="/track" class="btn btn--green btn--header headBtn"> Track Your Fitness </a>
-      <a href="/upload" class="btn btn--border btn--header headBtn fontWhite"> Upload and View </a>
-      <br>
-    </div>
-
-  </header>
-  <br><br><br>
-  <div id="aboutUs"></div>
-  <section class="bgCol section-about">
-    <div class=" background-color-heading u-center-text u-margin-bottom-big">
-      <h2 class="heading-secondary">
-        About us
-      </h2>
-
-
-    </div>
-
-    <div style="text-align: center;" class="section-about__para-box">
-      <p class="paragraph section-about__para">
-        Our application helps you to store all your medical records in one place and we will keep them safe and secure with ourselves so that you can find what you are looking for in your medical history in just a matter of seconds. Also, you can track and visualize your daily fitness records with our interactive graphs. All of these features with authentication and authorization so that only you can see your data.
-        <br>
-        We, helps you take care of your family’s health by storing medical records online, safely and securely.
-        So, you can find what you’re looking for in just a matter of seconds!
-        We give more than a storage solution, it’s an effective way to ensure that
-
-      </p>
-
-      <h3 class="heading-tertiary heading-tertiary__blue">YOU ARE IN CONTROL OF YOUR HEALTH 24/7</h3> <br>
-<a style="margin: auto;" href="/predict" class="btn btn--border btn--header headBtn fontWhite"> Get Diagnosed </a>
-
-    </div>
-
-
-
-  </section>
-
-  <!-- <section class="tarck">
+    <!-- <section class="tarck">
         <div class= " background-color-heading u-center-text u-margin-bottom-big">
             <h2 class="heading-secondary">
                 Track and Uplaod
@@ -137,155 +215,209 @@
 
     </section> -->
 
-    <section id="map">
-      <div class=" background-color-heading u-center-text ">
-        <h2 class="heading-secondary">
-          Find Doctors Near You
+    <section id="nearby">
+      <div class="background-color-heading u-center-text find-doctors">
+        <h2 class="heading-secondary">Find Doctors Near You</h2>
+      </div>
+      <h1>Search Location</h1>
+      <input id="locationInput" type="text" placeholder="Enter a location" />
+
+      <div id="map" style="height: 400px; width: 100%"></div>
+    </section>
+
+    <section class="section-maps">
+      <div class="background-color-heading u-center-text">
+        <h2 class="heading-secondary">Coming Soon</h2>
+      </div>
+
+      <h4 style="width: 100%" class="app-heading center">
+        We are also coming on....
+        <br /><br />
+        <button
+          class="download btn btn-dark btn-lg"
+          type="button"
+          name="button"
+        >
+          <i class="fab fa-google-play"></i> Play Store
+        </button>
+        <button
+          class="download btn btn-outline-dark btn-lg bgWhite"
+          type="button"
+          name="button"
+        >
+          <i class="fab fa-apple"></i>App Store
+        </button>
+      </h4>
+
+      <div class="phone">
+        <!-- <div id="map"></div> -->
+        <!-- <div class="row"> -->
+        <!-- <div class="col-12 col-md-6 iphone"> -->
+        <div class="app-details">
+          <div class="app-icons">
+            <!-- <i class="fab fa-apple">
+                      <i class="fab fa-google-play"></i> -->
+          </div>
+        </div>
+        <!-- </div> -->
+        <!-- <div class="col-12 col-md-6"> -->
+
+        <!-- </div> -->
+        <!-- </div> -->
+        <!-- <img class="iphoneDark" src="IMAGE272.png" alt=""> -->
+      </div>
+    </section>
+
+    <div id="keyFea"></div>
+    <section class="section-features u-margin-bottom-big">
+      <div class="background-color-heading u-center-text u-margin-bottom-big">
+        <h2 class="heading-secondary">key features</h2>
+      </div>
+
+      <div class="row featuresRow">
+        <div class="col-1-of-4 col-12 col-md-6 col-lg-3">
+          <div class="feature-box bgCol">
+            <ion-icon
+              class="feature-box__icon"
+              name="cloud-upload-outline"
+            ></ion-icon>
+            <h3 class="fontWhite heading-tertiary__blue u-margin-bottom-small">
+              UPLOAD & TRACK
+            </h3>
+            <p class="feature-box__text">
+              Get Free Storage upto 1GB and Upload all your Documents,Doctor
+              prescription making them access Anywhere and Anytime.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-1-of-4 col-12 col-md-6 col-lg-3">
+          <div class="feature-box bgCol">
+            <ion-icon
+              class="feature-box__icon"
+              name="bar-chart-outline"
+            ></ion-icon>
+            <h3 class="fontWhite heading-tertiary__blue u-margin-bottom-small">
+              VISUALIZATION
+            </h3>
+            <p class="feature-box__text">
+              Enter your health record from your Daily Health Checkups at Home,
+              and visualize your Daily Health care Routines using graphs and
+              charts.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-1-of-4 col-12 col-md-6 col-lg-3">
+          <div class="feature-box bgCol">
+            <ion-icon
+              class="feature-box__icon"
+              name="lock-closed-outline"
+            ></ion-icon>
+            <h3 class="fontWhite heading-tertiary__blue u-margin-bottom-small">
+              SAFE AND SECURE
+            </h3>
+            <p class="feature-box__text">
+              All your documents are safe and secured with us as we provides
+              authentication and authorization for all users.
+            </p>
+          </div>
+        </div>
+
+        <div class="col-1-of-4 col-12 col-md-6 col-lg-3">
+          <div class="feature-box bgCol">
+            <ion-icon class="feature-box__icon" name="cash-outline"></ion-icon>
+            <h3 class="fontWhite heading-tertiary__blue u-margin-bottom-small">
+              LIFETIME FREE
+            </h3>
+            <p class="feature-box__text">
+              Get instant access forever without paying any charges because your
+              health is our No. 1 priority.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section></section>
+    <div class="u-margin-bottom-big"></div>
+    <div id="goToTop" class="gototop">
+      <a href="mailto:medsync_hub@gmail.com">
+        <button class="btn btn-dange btn-sm toShow" type="button" name="button">
+          <i
+            style="color: #777; font-size: 50px; line-height: 60px"
+            class="fas fa-envelope aaa"
+          ></i></button
+      ></a>
+      <a href="#">
+        <button class="btn btn-dange btn-sm" type="button" name="button">
+          <i
+            style="color: #777; font-size: 50px; line-height: 60px"
+            class="fas fa-arrow-up aaa"
+          ></i></button
+      ></a>
+    </div>
+
+    <footer class="footer">
+      <div class="footer__logo-box">
+        <h2 style="font-size: 50px; font-weight: 900; color: rgb(5, 130, 19)">
+          <span onclick="window.location.href='/';" style="cursor: pointer">
+            <i>MedSync Hub</i>
+          </span>
         </h2>
       </div>
-      <div class="">
-      
-    </div>
-    </section>
-
-  <section class="section-maps">
-    <div class=" background-color-heading u-center-text ">
-      <h2 class="heading-secondary">
-        Coming Soon
-      </h2>
-    </div>
-
-    <h4 style="width:100%;" class="app-heading center">
-      We are also coming on....
-      <br /><br>
-      <button class="download btn btn-dark btn-lg" type="button" name="button"><i class="fab fa-google-play"></i> Play Store</button>
-      <button class="download btn btn-outline-dark btn-lg bgWhite" type="button" name="button"><i class="fab fa-apple"></i>App Store</button>
-
-    </h4>
-
-    <div class="phone">
-      <!-- <div id="map"></div> -->
-      <!-- <div class="row"> -->
-      <!-- <div class="col-12 col-md-6 iphone"> -->
-      <div class="app-details">
-        <div class="app-icons">
-          <!-- <i class="fab fa-apple">
-                      <i class="fab fa-google-play"></i> -->
-        </div>
-      </div>
-      <!-- </div> -->
-      <!-- <div class="col-12 col-md-6"> -->
-
-      <!-- </div> -->
-      <!-- </div> -->
-      <!-- <img class="iphoneDark" src="IMAGE272.png" alt=""> -->
-    </div>
-
-  </section>
-
-  <div id="keyFea">
-  </div>
-  <section class="section-features u-margin-bottom-big">
-    <div class=" background-color-heading u-center-text u-margin-bottom-big">
-      <h2 class="heading-secondary">
-        key features
-      </h2>
-    </div>
-
-    <div class="row featuresRow">
-      <div class="col-1-of-4 col-12 col-md-6 col-lg-3">
-        <div class="feature-box bgCol">
-          <ion-icon class="feature-box__icon" name="cloud-upload-outline"></ion-icon>
-          <h3 class="fontWhite heading-tertiary__blue u-margin-bottom-small">UPLOAD & TRACK</h3>
-          <p class="feature-box__text">
-            Get Free Storage upto 1GB and Upload all your Documents,Doctor prescription making them access Anywhere and Anytime.
+      <div class="row footRow">
+        <div class="col-1-of-2 col-12 col-lg-6">
+          <p style="text-align: justify" class="footer__copyright">
+            MedSync Hub.
           </p>
         </div>
-      </div>
-
-      <div class="col-1-of-4 col-12 col-md-6 col-lg-3">
-        <div class="feature-box bgCol">
-          <ion-icon class="feature-box__icon" name="bar-chart-outline"></ion-icon>
-          <h3 class="fontWhite heading-tertiary__blue u-margin-bottom-small">VISUALIZATION</h3>
-          <p class="feature-box__text">
-            Enter your health record from your Daily Health Checkups at Home, and visualize your Daily Health care Routines using graphs and charts.
-          </p>
+        <div class="col-1-of-2 foot col-12 col-md-6">
+          <div class="footer__navigation">
+            <ul class="footer__list row">
+              <li class="footer__item">
+                <a href="#" class="footer__link">Company</a>
+              </li>
+              <li class="footer__item">
+                <a href="#" class="footer__link">Contact Us</a>
+              </li>
+              <li class="footer__item">
+                <a href="#" class="footer__link">Privacy policy</a>
+              </li>
+              <li class="footer__item">
+                <a href="#" class="footer__link">Terms</a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
-
-      <div class="col-1-of-4 col-12 col-md-6 col-lg-3">
-        <div class="feature-box bgCol">
-          <ion-icon class="feature-box__icon" name="lock-closed-outline"></ion-icon>
-          <h3 class="fontWhite heading-tertiary__blue u-margin-bottom-small">SAFE AND SECURE</h3>
-          <p class="feature-box__text">
-            All your documents are safe and secured with us as we provides authentication and authorization for all users.
-          </p>
-        </div>
-      </div>
-
-      <div class="col-1-of-4 col-12 col-md-6 col-lg-3">
-        <div class="feature-box bgCol">
-          <ion-icon class="feature-box__icon" name="cash-outline"></ion-icon>
-          <h3 class="fontWhite heading-tertiary__blue u-margin-bottom-small">LIFETIME FREE</h3>
-          <p class="feature-box__text">
-            Get instant access forever without paying any charges because your health is our No. 1 priority.
-          </p>
-        </div>
-      </div>
-    </div>
-
-
-  </section>
- 
-    <section>
-
-    </section>
-<div class= "u-margin-bottom-big">
-
-
-  </div>
-  <div id="goToTop" class="gototop">
-    <a href="mailto:medsync_hub@gmail.com"> <button class="btn btn-dange btn-sm toShow" type="button" name="button"> <i style="color:#777; font-size:50px;line-height:60px;" class="fas fa-envelope aaa"></i></button></a>
-    <a href="#"> <button class="btn btn-dange btn-sm" type="button" name="button"> <i style="color:#777; font-size:50px;line-height:60px;" class="fas fa-arrow-up aaa"></i></button></a>
-  </div>
-
-
-  <footer class="footer">
-
-
-    <div class="footer__logo-box">
-      <h2 style="font-size:50px;font-weight:900;color:rgb(5, 130, 19)"><i>MedSync Hub</i></h2>
-    </div>
-    <div class="row footRow">
-      <div class="col-1-of-2 col-12 col-lg-6">
-        <p style="text-align:justify" class="footer__copyright">
-          MedSync Hub.
-        </p>
-      </div>
-      <div class="col-1-of-2 foot col-12 col-md-6">
-        <div class="footer__navigation">
-          <ul class="footer__list row">
-            <li class="footer__item"><a href="#" class="footer__link">Company</a></li>
-            <li class="footer__item"><a href="#" class="footer__link">Contact Us</a></li>
-            <li class="footer__item"><a href="#" class="footer__link">Carrers</a></li>
-            <li class="footer__item"><a href="#" class="footer__link">Privacy policy</a></li>
-            <li class="footer__item"><a href="#" class="footer__link">Terms</a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-    <p class="copyright">&copy Copyright MedSync Hub</p>
-   <!-- <p class="copyright">Made With ❤️ By Samarth & Lakshmi</p> -->
-  </footer>
-</body>
-<!-- <script src="/streamr/test.js"></script> -->
-<script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
-<script src="/js/script.js"></script>
-<script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
-<!-- <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script> -->
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBiZ9hSMcmFhYqnTwsPDFMHRRCio9W3Uds&callback=initMap" async defer></script>
-
-
+      <p class="copyright">&copy Copyright MedSync Hub</p>
+      <!-- <p class="copyright">Made With ❤️ By Samarth & Lakshmi</p> -->
+    </footer>
+    <script src="/js/maps.js"></script>
+  </body>
+  <!-- <script src="/streamr/test.js"></script> -->
+  <script src="https://unpkg.com/ionicons@5.2.3/dist/ionicons.js"></script>
+  <script
+    src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"
+  ></script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+    crossorigin="anonymous"
+  ></script>
+  <script src="/js/script.js"></script>
+  <script
+    src="https://code.jquery.com/jquery-3.5.1.min.js"
+    integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+    crossorigin="anonymous"
+  ></script>
+  <!-- <script src="https://unpkg.com/ionicons@5.0.0/dist/ionicons.js"></script> -->
+  <!-- <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBiZ9hSMcmFhYqnTwsPDFMHRRCio9W3Uds&callback=initMap"
+    async
+    defer
+  ></script> -->
 </html>
